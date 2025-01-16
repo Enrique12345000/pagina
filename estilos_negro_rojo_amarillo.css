@@ -1,0 +1,165 @@
+
+/* Estilos generales */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: red;
+    color: yellow;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid yellow;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* Botones */
+button, [role="button"] {
+    background-color: yellow;
+    color: black;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, [role="button"]:hover {
+    background-color: red;
+    color: yellow;
+}
+
+/* Modal */
+dialog {
+    background-color: black;
+    color: yellow;
+    border: 2px solid red;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.5);
+}
+
+/* Formularios */
+form {
+    background-color: black;
+    border: 2px solid yellow;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid red;
+    border-radius: 5px;
+    background-color: yellow;
+    color: black;
+    font-size: 1rem;
+}
+
+form input[type="submit"], form button {
+    width: auto;
+}
+
+/* Footer */
+footer {
+    background-color: red;
+    color: yellow;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 3px solid yellow;
+}
+
+/* Elementos multimedia */
+iframe, video, audio {
+    border: 3px solid yellow;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Listas */
+ul, ol {
+    margin: 20px;
+    padding: 0;
+    list-style-position: inside;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+/* Preguntas frecuentes */
+details {
+    background-color: red;
+    color: yellow;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details p {
+    margin: 10px 0 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"> <!--//tipo de documento o codificacion a usar-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--//para adaptarse al tamanio de la pantalla en la que se abre la pagina-->  
+    <title>titulo de mi sitio web 1</title>
+
+    <meta name="description" content="descripcion de la pagina la que aparece debajo del titulo de la busqueda"> <!--//descripcion de la pagina-->
+
+    <!--OPEN GRAPH-->
+    <meta property="og:title" content="portafolio de un ingeniero en sistemas"> <!--//titulo de la pagina-->
+    <meta property="og:description" content="portafolio minudeo de uningeniero con anio de experiencia en el rugro"> <!--//descripcion de la pagina-->
+    <meta property="og:image" content="/imagenes/pareja.jpg"> <!--//imagen de la pagina-->
+    <meta property="og:image:alt" content="una fotografia de jose enroique en la montania"> <!--//descripcion de la pagina-->
+
+    <meta name="robots" content="index, follow"> <!--//para que los motores de busqueda indexen la pagina-->
+    <meta name="theme-color" content="red"> <!--//color de la barra de navegacion de la pagina-->
+
+    <link rel="icon" type="image/jpg" href="/imagenes/pareja.jpg"> <!--//icono de la pagina-->
+    <style>
+      body{
+        background: #9cec95;
+      }
+    </style>
+    
+    <link rel="stylesheet" href="/estilos_negro_rojo_amarillo.css">
+  </head>
+  <body>
+    
+  <header>
+   <h1>TITULO JOSE ENRIQUE</h1>
+    <!--tamanio ancho y alto toutube  width="560" height="315"-->
+   <iframe style="width:100%; aspect-ratio: 16/9;"	  src="https://www.youtube.com/embed/E5AkrkRKJGo?si=M32EdwnA3FTpoLd5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+   <h3>aqui un mapa por si te pierdes bb</h3>
+
+   <div> 
+   <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12714.520257845757!2d-63.2857168!3d-17.3442128!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sbo!4v1736474509774!5m2!1ses-419!2sbo" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div> 
+
+    <nav>
+      <!--enlaces internos para navegar dentro de la misma pagina busca el elemento id para navegar hasta alli-->
+      <ul>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <!--enlaces externos para navegar a otras paginas-->
+      <a href="https://www.youtube.com/">youtube</a>
+
+      <li><a href="https://www.youtube.com/" 
+        target="_blank"
+        rel="noreferrer">youtube</a></li>
+        <!--rel="noreferrer para que no sepa la pagina entrante de que pagina vienes"-->
+       <!-- target="_blank"  para que se abra en una nueva pestaña-->
+    </nav> 
+  </header>
+   
+    <dialog id="dialog">
+      <h1>sabias que podias abrir una modal asi?</h1>
+      <p>esto es una modal</p>
+      <p>y es totalmente nativo</p>
+      <button id="cierre">Cerrar modal</button>
+    </dialog>  
+    <!--dialog es una ventana modal-->
+    <button id="show">ver mas informacion</button>
+
+    <script>
+     window.show.addEventListener("click", () => {
+       window.dialog.showModal();
+     });
+
+      window.cierre.addEventListener("click", () => {
+        window.dialog.close();
+      });
+    </script>
+
+    <!--video para reproducir videos loop=una vez termine vuelva a empezar
+    poster la imagen k aparece al inicio-->
+
+   <header><video   src="/imagenes/bailando.mp4" controls autoplay loop muted poster="/imagenes/pareja.jpg" width="200" height="400"></video></header>
+    <!--controls para que aparezcan los controles del video-->
+   <audio src="/imagenes/VIDA DE RICO REMIX - CAMILO - THAIEL DJ.mp3" controls autoplay loop></audio> 
+
+ <main>
+   <p>mas 15 anio como <strong> ingeniero en sistemas </strong> 
+       con amplia experiencia laboral en el area
+    lo cual me ha permitido desarrollar habilidades
+   </p>
+   <h2 id="experiencia">Experiencia</h2>
+   <!--ul es una lista desordenada
+   class es para referirme a ese hijo con el nombre de la clase el id es lo mismo y son atributos globales-->
+   <ul>
+       <li class="list-item">entel 2021</li>
+       <li class="list-item">tigo 2022</li>
+       <li class="list-item">claro 2023</li>
+       <li>cre 2024</li>
+   </ul>
+   <!--hidden atributo para ocultar la imagen-->
+   <!--forzamos la descarga de la imgaen-->
+   <!--para k la imagen se adapte al tamanio de la pantalla style="whidth:100% aspct-ratio: (el tamanio original de la imagen ej. 638/317);" ,,,asi ya no tenemos la necesidad de poner el ancho y alto-->
+   <a download href="/imagenes/pareja.jpg">
+   <img style="width:100%; aspect-ratio: 1366/768;"	
+     id="photo-image"
+     title="foto de paisaje aki" 
+     src="/imagenes/pareja.jpg" 
+     alt="si no carga la imagen muestra el mensaje -> una fotografia de pareja en paisaje" 
+     >
+   </a>
+   
+> 
+    <h2 id="proyectos">Proyetos realizados</h2>
+
+    <aside>
+     <header>
+       <h3>Mis tecnologias favoritas</h3>
+     </header>
+     <!--lista desordenada-->
+     <ul>
+       <span>HTML</span>
+       <span>CSS</span>
+       <span>JavaScript</span>
+       <span>React</span>
+       <span>Node</span>
+     </ul>
+     <!--lista ordenada el type="a" para inciso letra , para reversa type="1" reversed start="10" empieza en 10-->
+     <ol>
+       <li>HTML</li>
+       <li>CSS</li>
+       <li>JavaScript</li>
+       <li>React</li>
+       <li>Node</li>
+     </ol>
+    </aside>
+   
+    <button>Ver mas</button>
+
+    <div role="button" >
+      haz click aqui
+    </div>
+
+   <section>
+     <article>
+       <header> 
+         <h3>Sitio web Corporatico</h3>
+       </header>  
+         <p>desarrollo de un sitio web corporativo con una interfaz amigable y moderna</p>
+       <footer>
+         <small>Tecnologias utilizadas HTML, CSS, JavaScript, React, Node</small>
+       </footer>
+     </article>
+   </section>
+
+    <section>
+      <h2>preguntas frecuentes</h2>
+       <!--por defecto abrimos uno-->
+      <details open>
+        <summary>que estudio tienes?</summary>
+      <p>estudie en la FINOR Ingenieria en Sistemas durante 5 anio</p>
+      </details>
+
+      <details>
+        <summary>cuantos anio de experiencia tienes ?</summary>
+        <p>mas de 15 anio de experiencia en el rubro </p>
+      </details>
+
+      <details>
+        <summary>que tecnologias manejas?</summary>
+        <p>manejo HTML, CSS, JavaScript, React, Node</p>
+      </details>
+
+      <details>
+        <summary>cual es tu hobbit</summary>
+        <p>programar jugar free fire en mis tiempos libres y escuchar musica de anuel aa <a href="https://youtu.be/5Bcs0me4u8g">cancion favorita</a></p>
+
+        <div>
+          <a href="https://youtu.be/GnJ4znpPgr8?t=187" 
+          target="_blank" 
+          rel="noreferrer">tambien me encanta de la rose</a>
+        </div>
+
+      </details>
+    </section>
+
+   <section>
+     <h2>Formulario de contacto</h2>
+
+     <form method="post" action="/">
+        <fieldset>
+          <legend>informacion personal</legend>
+           <!--fieldset es para agrupar elementos del formulario-->
+           <!--legend es para darle un titulo al fieldset-->
+           <!--input es para ingresar informacion-->
+           <!--type es para definir el tipo de informacion que se va a ingresar-->
+           <!--name es para darle un nombre al input-->
+           <!--placeholder es para darle un texto de ayuda al input-->
+           <!--required es para que sea obligatorio-->
+           <!--div es para agrupar como un bloque o tambien dentro del label ponemos style="display: block para no usar div=-->
+          <div>
+           <!--el for es para cuando hagas click en el laber te lleve a la caja de texto 
+           para hacer la misma accion eliminar el for y el id  con el label envuelves el input-->
+          <label for="name">Nombre:</label>
+          <input type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Escribe tu nombre">
+          </div>
+
+          <label style="display: block;">Email    
+            <input type="email"  
+            name="email" 
+            placeholder="Escribe tu email">
+          </label>
+
+          <label >Contraseña:
+            <input type="password" 
+            name="password" 
+            placeholder="Escribe tu contraseña">
+        </fieldset>
+
+        <fieldset>
+          <legend>informacion adicional</legend>
+
+           <div>
+            <label for="phone">Telefono</label>
+            <input type="tel" 
+            id="phone"
+            name="phone"
+            placeholder="Escribe tu telefono" required pattern="[0-9]{9}">
+           </div> 
+
+           <label>Fecha de Nacimiento: 
+            <input type="datetime-local" required>
+           </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Otros</legend>
+          <div>
+            <label for="why">por que quieres contactar?</label>
+            <select name="why" id="why">
+              <option value="1">trabajo</option>
+              <option value="2">duda</option>
+              <option value="3">mas informacion</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="terms">aceptas los terminos y condiciones?</label>
+            <input type="checkbox" id="terms" name="terms" required>
+          </div>
+           <!--datalist es un input con un autocompletado-->
+          <div>
+            <datalist id="lenguajes">
+              <option value="HTML">
+              <option value="CSS">
+              <option value="JavaScript">
+              <option value="React">
+              <option value="Node">
+            </datalist>
+            <label>con que lenguaje o tecnologia quieres que te ayude
+              <input list="lenguajes" name="lenguajes">
+            </label>
+          </div>
+        </fieldset>
+
+        <input type="submit" value="Enviar datos">
+        <header>
+          <!--por defecto los botones que estan dentro de un formulario son de tipo submit
+          es opcional ponerlo-->
+        <button> boton tipo submit enviar</button>
+        </header>
+     </form>
+   </section>
+
+ </main>
+</body>
+
+<footer>
+  El porfolio mas bello del mundo
+  <div>
+  <a href="mailto:huallpamejiajoseenrique@gmail.com"> Enviame un correo</a>
+  </div>
+     
+  <a href="tel:+591 72564323">Llamame</a>
+  
+  <header>
+    <a href="whatsapp:+591 72564323">Escribeme por whatsapp</a>
+  </header>
+</footer>
